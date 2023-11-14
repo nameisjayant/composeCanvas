@@ -1,6 +1,6 @@
 ## composeCanvas - Custom Uis
 
-<p align="left"> A Custom Uis made with Jetpack Compose </p>
+<p align="left"> A Custom Uis made with Jetpack Compose Canvas </p>
 
 ### 🖥️ Screenshots
 
