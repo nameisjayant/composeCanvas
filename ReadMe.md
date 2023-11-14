@@ -9,7 +9,6 @@
 <img src="screenshots/car.png" height="400">
 </p>
 
-
 ## Find this project useful ? ❤️
 
 - Support it by clicking the ⭐️ button on the upper right of this page. ✌️

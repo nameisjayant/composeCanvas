@@ -82,7 +82,7 @@ fun CarCanvas() {
                 startAngle = 180f,
                 sweepAngle = 180f,
                 useCenter = false,
-                topLeft = Offset(x = width / 5, y = height / 2.5f),
+                topLeft = Offset(x = width / 5, y = height / 2.45f),
                 style = Stroke(width = 5f),
                 size = Size(200f, 200f)
             )
@@ -103,7 +103,7 @@ fun CarCanvas() {
                 startAngle = 180f,
                 sweepAngle = 180f,
                 useCenter = false,
-                topLeft = Offset(x = width - 400, y = height / 2.5f),
+                topLeft = Offset(x = width - 400, y = height / 2.45f),
                 style = Stroke(width = 5f),
                 size = Size(200f, 200f)
             )
