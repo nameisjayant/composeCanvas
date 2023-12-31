@@ -1,12 +1,13 @@
 ## composeCanvas - Custom Uis
 
-<p align="left"> A Custom Uis made with Jetpack Compose Canvas </p>
+<p align="left"> A Custom UIs made with Jetpack Compose Canvas </p>
 
 ### 🖥️ Screenshots
 
 <p align="center">
-<img src="screenshots/hut.webp" height="400">
-<img src="screenshots/car.png" height="400">
+<img src="screenshots/hut.webp" height="400" alt="hut image">
+<img src="screenshots/car.png" height="400" alt="car image">
+<img src="screenshots/android_logo.png" height="400" alt="android logo">
 </p>
 
 ## Find this project useful ? ❤️
