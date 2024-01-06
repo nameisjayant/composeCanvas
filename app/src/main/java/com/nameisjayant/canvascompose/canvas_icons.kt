@@ -20,13 +20,119 @@ import androidx.compose.ui.unit.dp
 fun DrawIconWithCanvas() {
 
     FlowRow(
-        modifier = Modifier.fillMaxSize()
+        modifier = Modifier
+            .padding(vertical = 20.dp)
+            .fillMaxSize(),
     ) {
         MenuIcon()
         CheckIcon()
         KeyboardBackArrow()
+        KeyboardForwardArrowIcon()
+        KeyboardArrowDownIcon()
+        KeyboardArrowUpIcon()
+        ArrowBackIcon()
     }
 
+}
+
+@Composable
+fun ArrowBackIcon(
+    modifier: Modifier = Modifier
+) {
+    Canvas(
+        modifier = modifier
+            .padding(20.dp)
+            .size(20.dp)
+    ) {
+        val height = size.height
+        val width = size.width
+        createLine(
+            start = Offset(0f, height / 2),
+            end = Offset(width / 2f, 0f)
+        )
+        createLine(
+            start = Offset(0f, height / 2),
+            end = Offset(width / 2f, height)
+        )
+        createLine(
+            start = Offset(width / 4f, height / 2),
+            end = Offset(width, height / 2)
+        )
+    }
+}
+
+@Composable
+fun KeyboardArrowUpIcon(
+    modifier: Modifier = Modifier
+) {
+    Canvas(
+        modifier = modifier
+            .padding(20.dp)
+            .size(20.dp)
+    ) {
+        val height = size.height
+        val width = size.width
+        createLine(
+            start = Offset(
+                width / 2f, 0f
+            ),
+            end = Offset(
+                0f, height / 2f
+            )
+        )
+        createLine(
+            start = Offset(
+                width / 2, 0f
+            ),
+            end = Offset(
+                width, height / 2f
+            )
+        )
+    }
+}
+
+@Composable
+fun KeyboardArrowDownIcon(
+    modifier: Modifier = Modifier
+) {
+    Canvas(
+        modifier = modifier
+            .padding(20.dp)
+            .size(20.dp)
+    ) {
+        val height = size.height
+        val width = size.width
+        createLine(
+            start = Offset(0f, height / 2.5f),
+            end = Offset(width / 2, height)
+        )
+        createLine(
+            start = Offset(width, height / 2.5f),
+            end = Offset(width / 2, height)
+        )
+    }
+}
+
+@Composable
+fun KeyboardForwardArrowIcon(
+    modifier: Modifier = Modifier
+) {
+    Canvas(
+        modifier = modifier
+            .padding(20.dp)
+            .size(20.dp)
+    ) {
+        val height = size.height
+        val width = size.width
+        createLine(
+            start = Offset(width / 2.5f, 0f),
+            end = Offset(width, height / 2)
+        )
+        createLine(
+            start = Offset(width / 2.5f, height),
+            end = Offset(width, height / 2)
+        )
+    }
 }
 
 @Composable
@@ -36,7 +142,7 @@ fun KeyboardBackArrow(
     Canvas(
         modifier = modifier
             .padding(20.dp)
-            .size(24.dp)
+            .size(20.dp)
     ) {
         val height = size.height
         val width = size.width
@@ -58,7 +164,7 @@ fun CheckIcon(
     Canvas(
         modifier = modifier
             .padding(20.dp)
-            .size(24.dp)
+            .size(20.dp)
     ) {
         val height = size.height
         val width = size.width
@@ -81,7 +187,7 @@ fun MenuIcon(
     Canvas(
         modifier = modifier
             .padding(20.dp)
-            .size(24.dp)
+            .size(20.dp)
     ) {
         val width = size.width
         val height = size.height
