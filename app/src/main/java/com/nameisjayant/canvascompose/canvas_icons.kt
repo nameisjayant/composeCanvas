@@ -22,6 +22,8 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.DrawScope
+import androidx.compose.ui.graphics.drawscope.DrawStyle
+import androidx.compose.ui.graphics.drawscope.Fill
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -73,8 +75,63 @@ fun DrawIconWithCanvas() {
                 HomeIcon()
                 AddIcon()
                 AddIconWithCircle()
+                MoreVertIcon()
+                CreateHoriIcon()
             }
         }
+    }
+}
+
+@Composable
+fun CreateHoriIcon(
+    modifier: Modifier = Modifier
+) {
+    Canvas(
+        modifier = modifier
+            .padding(20.dp)
+            .size(20.dp)
+    ) {
+        val width = size.width
+        val size = size.width / 5
+
+        createCircle(
+            offset = Offset.Zero,
+            size = size
+        )
+        createCircle(
+            offset = Offset(width / 2f, 0f),
+            size = size
+        )
+        createCircle(
+            offset = Offset(width, 0f),
+            size
+        )
+    }
+}
+
+@Composable
+fun MoreVertIcon(
+    modifier: Modifier = Modifier
+) {
+    Canvas(
+        modifier = modifier
+            .padding(20.dp)
+            .size(20.dp)
+    ) {
+        val height = size.height
+        val size = size.width / 5
+        createCircle(
+            offset = Offset.Zero,
+            size = size
+        )
+        createCircle(
+            offset = Offset(0f, height / 2f),
+            size = size
+        )
+        createCircle(
+            offset = Offset(0f, height),
+            size = size
+        )
     }
 }
 
@@ -89,9 +146,9 @@ fun AddIconWithCircle(
     ) {
         val height = size.height
         val width = size.width
-
-        drawCircle(
-            color = Color.Black,
+        createCircle(
+            offset = center,
+            size = size.width / 1.5f,
             style = Stroke(width = 5f)
         )
         createLine(
@@ -446,6 +503,20 @@ fun MenuIcon(
             end = Offset(width, height)
         )
     }
+}
+
+fun DrawScope.createCircle(
+    offset: Offset,
+    size: Float,
+    color: Color = Color.Black,
+    style: DrawStyle = Fill
+) {
+    drawCircle(
+        color = color,
+        radius = size,
+        center = offset,
+        style = style
+    )
 }
 
 fun DrawScope.createLine(
