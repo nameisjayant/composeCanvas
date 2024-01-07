@@ -5,7 +5,7 @@
 ### 🖥️ Screenshots
 
 <p align="center">
-<img src="screenshots/canvas_icon" height="400" alt="canvas icon image">
+<img src="screenshots/canvas_icon.png" height="400" alt="canvas icon image">
 <img src="screenshots/hut.webp" height="400" alt="hut image">
 <img src="screenshots/car.png" height="400" alt="car image">
 <img src="screenshots/android_logo.png" height="400" alt="android logo">
